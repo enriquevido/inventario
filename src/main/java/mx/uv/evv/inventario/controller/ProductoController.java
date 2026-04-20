@@ -1,6 +1,5 @@
-package mx.uv.eyrc.inventario.controller;
+package mx.uv.evv.inventario.controller;
 
-import java.net.ResponseCache;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -15,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import mx.uv.eyrc.inventario.entity.Producto;
-import mx.uv.eyrc.inventario.service.ProductoService;
+import mx.uv.evv.inventario.entity.Producto;
+import mx.uv.evv.inventario.service.ProductoService;
 
 @RestController
 @RequestMapping("/api/productos")
@@ -27,32 +26,32 @@ public class ProductoController {
     // Aquí puedes agregar métodos para manejar las solicitudes HTTP (GET, POST, PUT, DELETE)
     @GetMapping
     public List<Producto> ListarTodos() {
-        return service.ListarTodos();
+        return service.listAll();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Producto> ObtenerPorId(@PathVariable Long id) {
-        return service.BuscarPorId(id)
+        return service.searchId(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
     public ResponseEntity<Producto> Crear(@RequestBody Producto producto) {
-        Producto nuevoProducto = service.Guardar(producto);
+        Producto nuevoProducto = service.save(producto);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevoProducto);
     }
     
     @PutMapping("/{id}")
     public ResponseEntity<Producto> Actualizar(@PathVariable Long id, @RequestBody Producto producto) {
         producto.setId(id);
-        Producto actualizado = service.Guardar(producto);
+        Producto actualizado = service.save(producto);
         return ResponseEntity.ok(actualizado);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> Eliminar(@PathVariable Long id) {
-        service.Eliminar(id);
+        service.delete(id);
         return ResponseEntity.noContent().build();
     }
 }
