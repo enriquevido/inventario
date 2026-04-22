@@ -20,6 +20,7 @@ cd inventario
 #3. Ejecutar con Docker Compose
 docker compose up --build
 ```
+
 ## Endpoints
 | Método | Endpoint | Descripción |
 | :--- | :--- | :--- |

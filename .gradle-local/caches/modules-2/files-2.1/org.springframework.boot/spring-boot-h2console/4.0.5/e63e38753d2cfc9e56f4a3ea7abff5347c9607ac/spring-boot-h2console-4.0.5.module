@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-h2console",
+    "version": "4.0.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.4.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.5"
+          }
+        },
+        {
+          "group": "jakarta.servlet",
+          "module": "jakarta.servlet-api",
+          "version": {
+            "requires": "6.1.0"
+          }
+        },
+        {
+          "group": "com.h2database",
+          "module": "h2",
+          "version": {
+            "requires": "2.4.240"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-h2console-4.0.5.jar",
+          "url": "spring-boot-h2console-4.0.5.jar",
+          "size": 13929,
+          "sha512": "39813b31a159b5171f3e55cf2cb826dcab60ed0cefbc5983d8887347e515bf8b805efd9c4baf22894b544f6286c4c79ba45befce484dec7c1fab656fecdb7a62",
+          "sha256": "edc0af2e49273c86e2971ac2665d91a4bf8dc2ad46ea5d80fcdd4060b85be65a",
+          "sha1": "44887bec7d5d6211425e4c5c5445a9e318437396",
+          "md5": "f5864dd672cb87cd7830961af4d50c48"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.5"
+          }
+        },
+        {
+          "group": "jakarta.servlet",
+          "module": "jakarta.servlet-api",
+          "version": {
+            "requires": "6.1.0"
+          }
+        },
+        {
+          "group": "com.h2database",
+          "module": "h2",
+          "version": {
+            "requires": "2.4.240"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-h2console-4.0.5.jar",
+          "url": "spring-boot-h2console-4.0.5.jar",
+          "size": 13929,
+          "sha512": "39813b31a159b5171f3e55cf2cb826dcab60ed0cefbc5983d8887347e515bf8b805efd9c4baf22894b544f6286c4c79ba45befce484dec7c1fab656fecdb7a62",
+          "sha256": "edc0af2e49273c86e2971ac2665d91a4bf8dc2ad46ea5d80fcdd4060b85be65a",
+          "sha1": "44887bec7d5d6211425e4c5c5445a9e318437396",
+          "md5": "f5864dd672cb87cd7830961af4d50c48"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-h2console-4.0.5-javadoc.jar",
+          "url": "spring-boot-h2console-4.0.5-javadoc.jar",
+          "size": 112748,
+          "sha512": "51c852d7062e88d98fdfe32415436afde35e9592c6914dbc70d52e5abe61676991ebb42427c6ccb8d1590b361a720af59a3857ba6a0956c1a261caa67c1fad21",
+          "sha256": "b6751f0c5a2935124fd407bf78008a824edb3b52a243c0e96eeae9f88cfaf544",
+          "sha1": "c816c8e8445f939c52c3c2f349b4d244d935adb5",
+          "md5": "8b47123243f462985be24129e15185cb"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-h2console-4.0.5-sources.jar",
+          "url": "spring-boot-h2console-4.0.5-sources.jar",
+          "size": 9812,
+          "sha512": "19c71a870673e820b868ff6cc653b7033e7b6614221b01d110851d5fa1506ac88d98d7cde9da128d8b1fefc3c6b292a4dea46d001220fbfda3fd38c340abaa00",
+          "sha256": "b40012f683ce574110c6e41c8a491566797e1943c7b6cf5f210d0147690bb899",
+          "sha1": "429d79753ab44a18a1c2b4b420bb652d3fbb3d58",
+          "md5": "3d8d226b68957dd7323ece420ca4bbac"
+        }
+      ]
+    }
+  ]
+}

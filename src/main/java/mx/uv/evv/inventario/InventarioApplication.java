@@ -1,5 +1,7 @@
 package mx.uv.evv.inventario;
 
+import java.time.LocalDateTime;
+
 import mx.uv.evv.inventario.entity.Producto;
 import mx.uv.evv.inventario.repository.ProductoRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -17,9 +19,13 @@ public class InventarioApplication {
 	@Bean
 	CommandLineRunner initData(ProductoRepository repository){
 		return args -> {
-			repository.save(new Producto(null, "Laptop Dell", "i7 16GB RAM", 15500.50, 5, "Electronica", null));
-			repository.save(new Producto(null, "Mouse", "Inalambrico", 500.50, 5, "Electronica", null));
-			repository.save(new Producto(null, "Audifonos", "Sony", 1500.50, 1, "Electronica", null));
+			if (repository.count() > 0) {
+				return;
+			}
+
+			repository.save(new Producto(null, "Laptop Dell", "i7 16GB RAM", 15500.50, 5, "Electronica", LocalDateTime.now()));
+			repository.save(new Producto(null, "Mouse", "Inalambrico", 500.50, 5, "Electronica", LocalDateTime.now()));
+			repository.save(new Producto(null, "Audifonos", "Sony", 1500.50, 1, "Electronica", LocalDateTime.now()));
 		};
 	}
 
